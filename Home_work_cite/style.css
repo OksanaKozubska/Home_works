@@ -1,0 +1,12 @@
+body{
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 30px;
+}
+
+
+div{ 
+    color: rgb(113, 57, 18);
+    border:10px solid rgb(84, 18, 18);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
