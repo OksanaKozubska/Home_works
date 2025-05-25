@@ -1,0 +1,415 @@
+{
+  "id": "6d745f91-7b83-4f9e-b6e8-1f8f36a87703",
+  "version": "2.0",
+  "name": "Home_Work25",
+  "url": "https://pethouse.ua/ua/",
+  "tests": [{
+    "id": "b2d24ef5-a224-464d-95d4-11b81754dddb",
+    "name": "Seach product",
+    "commands": [{
+      "id": "ba114a6f-d2c5-4b6d-a9e5-fd03a09424e1",
+      "comment": "",
+      "command": "store",
+      "target": "корм",
+      "targets": [],
+      "value": "seachid"
+    }, {
+      "id": "dc02a0f3-b5d2-413c-885f-002c5da85b71",
+      "comment": "",
+      "command": "echo",
+      "target": "${seachid}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4712f6e9-6b66-44ec-bf53-fb0ae6ab180f",
+      "comment": "",
+      "command": "open",
+      "target": "https://pethouse.ua/ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c557321-4644-481b-b63a-391d2f65adeb",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='search']",
+      "targets": [
+        ["id=search", "id"],
+        ["name=search_value", "name"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='header-searchform']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${seachid}"
+    }, {
+      "id": "980cec23-a621-4144-a34b-cb0a53e41f78",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["name=search_value", "name"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='header-searchform']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }, {
+    "id": "72b146a6-6623-41b1-b31a-5e7179249b0f",
+    "name": "Seach and add product to cart",
+    "commands": [{
+      "id": "56c35d74-785d-4e34-b95e-f3d8b950a900",
+      "comment": "",
+      "command": "open",
+      "target": "https://pethouse.ua/ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3f02219-c3c0-471c-8567-ca3044464a7c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=li:nth-child(2) > .first-level-a",
+      "targets": [
+        ["css=li:nth-child(2) > .first-level-a", "css:finder"],
+        ["xpath=//ul[@id='first-level-ul']/li[2]/div", "xpath:idRelative"],
+        ["xpath=//li[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99b74013-49ed-4df7-b7f3-ab4ec1901d71",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Вологий корм",
+      "targets": [
+        ["linkText=Вологий корм", "linkText"],
+        ["css=li:nth-child(2) .top-menu-inner:nth-child(1) > a:nth-child(4)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Вологий корм')])[2]", "xpath:link"],
+        ["xpath=//ul[@id='first-level-ul']/li[2]/ul/div/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ua/shop/koshkam/konservi/')]", "xpath:href"],
+        ["xpath=//li[2]/ul/div/a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0dbf9904-a75a-464c-9453-7aa43544a191",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.bd-search-results > .container",
+      "targets": [
+        ["css=.bd-search-results > .container", "css:finder"],
+        ["xpath=//div[@id='__next']/div[4]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[4]/div", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "aed22b55-08ce-403d-a604-45b913ff4bd6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.z2-sort",
+      "targets": [
+        ["css=.z2-sort", "css:finder"],
+        ["xpath=//form[@id='searchSortForm']/div", "xpath:idRelative"],
+        ["xpath=//section/div/form/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a73c291-9300-42f2-8516-2ae112a151be",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.z2-sort > label",
+      "targets": [
+        ["css=.z2-sort > label", "css:finder"],
+        ["xpath=//form[@id='searchSortForm']/div/label", "xpath:idRelative"],
+        ["xpath=//form/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Сортувати:')]", "xpath:innerText"]
+      ],
+      "value": "Сортувати:"
+    }, {
+      "id": "e17cbb82-e267-4750-b02d-b6f5aeb79529",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ph-filteritems-leader-container-fieldset > .ph-new-cat-brand-block:nth-child(9) .ph-new-cat-brand-title",
+      "targets": [
+        ["css=.ph-filteritems-leader-container-fieldset > .ph-new-cat-brand-block:nth-child(9) .ph-new-cat-brand-title", "css:finder"],
+        ["xpath=//div[@id='__next']/div[4]/div/div[2]/aside/div/table/tbody/tr/td/div[2]/fieldset/div[8]/a/label/span", "xpath:idRelative"],
+        ["xpath=//div[8]/a/label/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Brit Premium')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a382f0f-8d22-414d-a2f3-135021b45e7f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Brit Premium Філе качки в соусі для стерилізованих котів')]",
+      "targets": [
+        ["linkText=Brit Premium Філе качки в соусі для стерилізованих котів", "linkText"],
+        ["css=.ph-new-catalog-tovar-block:nth-child(4) > .ph-new-catalog-tovar-block-table a", "css:finder"],
+        ["xpath=//a[contains(text(),'Brit Premium Філе качки в соусі для стерилізованих котів')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/div[4]/div/div[2]/div/div/section/div[4]/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ua/shop/koshkam/konservi/britpremium/brit-premium-file-utki-v-souse-dlya-sterilizovannih-koshek/')]", "xpath:href"],
+        ["xpath=//div[4]/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Brit Premium Філе качки в соусі для стерилізованих котів')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59eb3ecb-267c-4850-82e3-0a51095245a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ph-new-catalog-unit-buy",
+      "targets": [
+        ["css=.ph-new-catalog-unit-buy", "css:finder"],
+        ["xpath=//div[@id='ph-new-catalog-price-block-container-single-goods']/div/div/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0cc170c3-2cd7-401b-bbe8-60c8608488b6",
+      "comment": "",
+      "command": "click",
+      "target": "id=increment-good",
+      "targets": [
+        ["id=increment-good", "id"],
+        ["linkText=+", "linkText"],
+        ["css=#increment-good", "css:finder"],
+        ["xpath=//a[contains(text(),'+')]", "xpath:link"],
+        ["xpath=//a[@id='increment-good']", "xpath:attributes"],
+        ["xpath=//div[@id='ph-new-catalog-price-block-container-single-goods']/div/div/div[3]/div/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div[3]/div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c4ddbc7-d3fb-4fd8-b0ec-cb767536cdd8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-cart",
+      "targets": [
+        ["css=.icon-cart", "css:finder"],
+        ["xpath=//header[@id='header-main']/section[2]/div/div/div[5]/div/a/span[3]", "xpath:idRelative"],
+        ["xpath=//span[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "98efef73-e36c-4d10-a384-90706b12adcd",
+    "name": "Delete product from cart",
+    "commands": [{
+      "id": "3963439b-64b9-4080-9428-416d2d2a53d7",
+      "comment": "",
+      "command": "open",
+      "target": "https://pethouse.ua/ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3136ebec-7ae1-4404-a83d-07ab8d59138e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#tpl-logo > a",
+      "targets": [
+        ["css=#tpl-logo > a", "css:finder"],
+        ["xpath=//div[@id='tpl-logo']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ua/')])[17]", "xpath:href"],
+        ["xpath=//section[2]/div/div/div[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fa02cd6-0cf4-4bae-9678-6cb8b63a266e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.header-cart > a",
+      "targets": [
+        ["css=.header-cart > a", "css:finder"],
+        ["xpath=//header[@id='header-main']/section[2]/div/div/div[5]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ua/basket/')]", "xpath:href"],
+        ["xpath=//div[5]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "afd017e7-2245-4c6f-8253-b0f7d833c882",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-cart > a",
+      "targets": [
+        ["css=.header-cart > a", "css:finder"],
+        ["xpath=//header[@id='header-main']/section[2]/div/div/div[5]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ua/basket/')]", "xpath:href"],
+        ["xpath=//div[5]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53f41bfb-cf04-48dc-8b71-f47bda1ee897",
+      "comment": "",
+      "command": "click",
+      "target": "id=tpl_basket-num-dec",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98e640a9-886f-4865-9989-0e791d927587",
+      "comment": "",
+      "command": "click",
+      "target": "id=tpl_basket-num-dec",
+      "targets": [
+        ["id=tpl_basket-num-dec", "id"],
+        ["linkText=-", "linkText"],
+        ["name=decrement", "name"],
+        ["css=#tpl_basket-num-dec", "css:finder"],
+        ["xpath=(//a[contains(text(),'-')])[7]", "xpath:link"],
+        ["xpath=//a[@id='tpl_basket-num-dec']", "xpath:attributes"],
+        ["xpath=//div[@id='basket-row-wrapper']/div/div[2]/div[2]/div[2]/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b49e253-2dd3-47ca-80bf-efb2e7af3ef8",
+      "comment": "",
+      "command": "click",
+      "target": "css=#tpl-logo > a",
+      "targets": [
+        ["css=#tpl-logo > a", "css:finder"],
+        ["xpath=//div[@id='tpl-logo']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ua/')])[17]", "xpath:href"],
+        ["xpath=//section[2]/div/div/div[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "b921668c-f74a-42e9-88e7-d9f1a488fbca",
+    "name": "compare products",
+    "commands": [{
+      "id": "fc8b2bce-ea81-44b8-bfd2-a4cd3aefd1dd",
+      "comment": "",
+      "command": "open",
+      "target": "https://pethouse.ua/ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95d1c59c-4657-41e9-a398-9416f4ae0d65",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "xpath=//ul[@id='first-level-ul']/li[2]/div",
+      "targets": [
+        ["css=li:nth-child(2) > .first-level-a", "css:finder"],
+        ["xpath=//ul[@id='first-level-ul']/li[2]/div", "xpath:idRelative"],
+        ["xpath=//li[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df4d8e00-2e53-4a48-b79d-e897f16f65b7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Вологий корм",
+      "targets": [
+        ["linkText=Вологий корм", "linkText"],
+        ["css=li:nth-child(2) .top-menu-inner:nth-child(1) > a:nth-child(4)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Вологий корм')])[2]", "xpath:link"],
+        ["xpath=//ul[@id='first-level-ul']/li[2]/ul/div/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ua/shop/koshkam/konservi/')]", "xpath:href"],
+        ["xpath=//li[2]/ul/div/a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d758c39b-cd91-4c85-9367-ef77ffc1a0be",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Brit Premium')]",
+      "targets": [
+        ["css=.ph-filteritems-leader-container-fieldset > .ph-new-cat-brand-block:nth-child(9) .ph-new-cat-brand-title", "css:finder"],
+        ["xpath=//div[@id='__next']/div[4]/div/div[2]/aside/div/table/tbody/tr/td/div[2]/fieldset/div[8]/a/label/span", "xpath:idRelative"],
+        ["xpath=//div[8]/a/label/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Brit Premium')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6c2f28d-547d-443a-908b-28e66ea7fe52",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.ph-filteritems-leader-container-fieldset > .ph-new-cat-brand-block:nth-child(9)",
+      "targets": [
+        ["css=.ph-filteritems-leader-container-fieldset > .ph-new-cat-brand-block:nth-child(9)", "css:finder"],
+        ["xpath=//div[@id='__next']/div[4]/div/div[2]/aside/div/table/tbody/tr/td/div[2]/fieldset/div[8]", "xpath:idRelative"],
+        ["xpath=//fieldset/div[8]", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "b956d7b6-00a7-49c7-b9e4-dfecd521a1d6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='__next']/div[4]/div/div[2]/aside/div/table/tbody/tr/td/div[2]/fieldset/div/span/label/span",
+      "targets": [
+        ["css=.ph-filteritems-leader-container-fieldset > .ph-new-cat-brand-block:nth-child(2) .ph-new-cat-brand-title", "css:finder"],
+        ["xpath=//div[@id='__next']/div[4]/div/div[2]/aside/div/table/tbody/tr/td/div[2]/fieldset/div/span/label/span", "xpath:idRelative"],
+        ["xpath=//label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "997ca891-4899-472e-934b-c0f111978e4a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ph-new-catalog-tovar-block:nth-child(3) .cat-compare-add",
+      "targets": [
+        ["css=.ph-new-catalog-tovar-block:nth-child(3) .cat-compare-add", "css:finder"],
+        ["xpath=//div[@id='__next']/div[4]/div/div[2]/div/div/section/div[3]/div[3]/div[2]", "xpath:idRelative"],
+        ["xpath=//section/div[3]/div[3]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c04310f7-3ce2-4ad4-87ce-f4c6cfd9db1f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ph-new-catalog-tovar-block:nth-child(12) .cat-compare-add",
+      "targets": [
+        ["css=.ph-new-catalog-tovar-block:nth-child(12) .cat-compare-add", "css:finder"],
+        ["xpath=//div[@id='__next']/div[4]/div/div[2]/div/div/section/div[12]/div[3]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[12]/div[3]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdaddb45-4894-4f83-b131-55518260f15d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Порівняння",
+      "targets": [
+        ["linkText=Порівняння", "linkText"],
+        ["css=.compare-big", "css:finder"],
+        ["xpath=//header[@id='header-main']/section/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ua/comparison/')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Порівняння')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7da656b7-a640-47e3-a02e-8208d1c1a49b",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=tr:nth-child(2) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='__next']/div[4]/div[2]/div/div[2]/table/tbody/tr[2]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "639f7702-5304-44a8-addc-2cb9106a4af9",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "97a7d172-ed2f-4853-917b-d097a33b9bcd",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b2d24ef5-a224-464d-95d4-11b81754dddb"]
+  }],
+  "urls": ["https://pethouse.ua/ua/"],
+  "plugins": []
+}
